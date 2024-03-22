@@ -20,6 +20,12 @@
         {
           "type": "named",
           "data": {
+            "name": "1.00"
+          }
+        },
+        {
+          "type": "named",
+          "data": {
             "name": "shootSpeaker"
           }
         },
