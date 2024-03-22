@@ -197,7 +197,7 @@ public class RobotContainer
     public void toggleLedLights() {
       double currentValue = this.ledLight.get();
 
-      if(currentValue != .93) {
+      if(currentValue == .93) {
         setLightsToBlue();
       } else if(currentValue == .87) {
         setLightsToRed();

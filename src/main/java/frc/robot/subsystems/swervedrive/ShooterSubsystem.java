@@ -30,8 +30,8 @@ public class ShooterSubsystem extends SubsystemBase {
 
     public void intake(){
         
-        TopShooterMotor.set(-0.15);
-        BottomShooterMotor.set(0.15);
+        TopShooterMotor.set(-0.20);
+        BottomShooterMotor.set(0.20);
     }
 
     public void stopShooter(){

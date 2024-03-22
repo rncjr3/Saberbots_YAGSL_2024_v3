@@ -14,13 +14,19 @@
         {
           "type": "named",
           "data": {
-            "name": "shootSpeaker"
+            "name": "Intake"
           }
         },
         {
           "type": "wait",
           "data": {
-            "waitTime": 5.0
+            "waitTime": 1.0
+          }
+        },
+        {
+          "type": "named",
+          "data": {
+            "name": "shootSpeaker"
           }
         },
         {
