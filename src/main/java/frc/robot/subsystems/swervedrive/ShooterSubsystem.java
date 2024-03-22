@@ -11,8 +11,8 @@ public class ShooterSubsystem extends SubsystemBase {
     Timer timer = new Timer();
 
     public ShooterSubsystem(){
-        TopShooterMotor.setSmartCurrentLimit(80);
-        BottomShooterMotor.setSmartCurrentLimit(80);
+        TopShooterMotor.setSmartCurrentLimit(100);
+        BottomShooterMotor.setSmartCurrentLimit(100); 
     }
 
     public void shootTop(){

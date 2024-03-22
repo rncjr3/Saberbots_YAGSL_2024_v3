@@ -181,7 +181,7 @@ public class RobotContainer
     /**
      * Creates a Spark object for the rev blinking led strip.
      */
-    private Spark ledLight = new Spark(1);
+    private Spark ledLight = new Spark(0);
 
     /** 
      * Constructor for this RevBlinking. Sets the lights to default color (white)
