@@ -43,12 +43,15 @@ public class RobotContainer
   private final SwerveSubsystem drivebase = new SwerveSubsystem(new File(Filesystem.getDeployDirectory(), "swerve/neo"));
   private final HangerSubsystem hang = new HangerSubsystem();
   private final ShooterSubsystem m_ShooterSubsystem = new ShooterSubsystem();
-  // private RevBlinking ledRevBlinking = new RevBlinking();
+  private RevBlinking ledRevBlinking = new RevBlinking();
 
   // Replace with CommandPS4Controller or CommandJoystick if needed
   final CommandXboxController driverXbox = new CommandXboxController(0);
 
+  // Auto chooser for smart dashboard.
   private SendableChooser<Command> autoChooser = AutoBuilder.buildAutoChooser();
+
+  // Auto option chosen from the smart dashboard.
   private String m_autoSelected;
 
   /**
@@ -142,11 +145,11 @@ public class RobotContainer
     driverXbox.povLeft().onTrue(new InstantCommand(() -> m_ShooterSubsystem.stopShooter()));
     driverXbox.povDown().onTrue(new InstantCommand(() -> m_ShooterSubsystem.intake()));
 
-    // Light keybind
-    // driverXbox.x().onTrue(new InstantCommand(() -> {
-    //   System.out.println("Lights changed");
-    //   this.ledRevBlinking.toggleLedLights();
-    // }));
+    // Light keybind/s.
+    driverXbox.x().onTrue(new InstantCommand(() -> {
+      System.out.println("Lights changed");
+      this.ledRevBlinking.toggleLedLights();
+    }));
   }
 
   /**
@@ -178,10 +181,10 @@ public class RobotContainer
     /**
      * Creates a Spark object for the rev blinking led strip.
      */
-    private Spark ledLight = new Spark(0);
+    private Spark ledLight = new Spark(1);
 
     /** 
-     * Constructor for this RevBlinking.     * Sets the lights to default color (white)
+     * Constructor for this RevBlinking. Sets the lights to default color (white)
      */
     public RevBlinking() {
       // Constructor for future implementation.
