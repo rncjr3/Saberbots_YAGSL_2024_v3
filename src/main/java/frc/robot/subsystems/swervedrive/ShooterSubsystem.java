@@ -11,8 +11,8 @@ public class ShooterSubsystem extends SubsystemBase {
     Timer timer = new Timer();
 
     public ShooterSubsystem(){
-        TopShooterMotor.setSmartCurrentLimit(100);
-        BottomShooterMotor.setSmartCurrentLimit(100); 
+        TopShooterMotor.setSmartCurrentLimit(130);
+        BottomShooterMotor.setSmartCurrentLimit(130); 
     }
 
     public void shootTop(){
@@ -30,8 +30,8 @@ public class ShooterSubsystem extends SubsystemBase {
 
     public void intake(){
         
-        TopShooterMotor.set(-0.20);
-        BottomShooterMotor.set(0.20);
+        TopShooterMotor.set(-0.1);
+        BottomShooterMotor.set(0.1);
     }
 
     public void stopShooter(){
@@ -43,9 +43,9 @@ public class ShooterSubsystem extends SubsystemBase {
         timer.reset();
         timer.start();
         while(timer.get()<2){
-            TopShooterMotor.set(1);
+            TopShooterMotor.setVoltage(16);
             if(timer.get()>1){
-                BottomShooterMotor.set(-1);
+                BottomShooterMotor.setVoltage(-16);
             }
         }
         TopShooterMotor.set(0);

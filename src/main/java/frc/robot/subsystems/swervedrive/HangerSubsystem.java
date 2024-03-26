@@ -14,11 +14,11 @@ public class HangerSubsystem extends SubsystemBase{
     }
 
     public void pullUP(){
-        hangingMotor.set(0.8);
+        hangingMotor.set(0.9);
     }
 
     public void pullDown(){
-        hangingMotor.set(-0.8);
+        hangingMotor.set(-0.9);
     }
 
     public void stopPull(){

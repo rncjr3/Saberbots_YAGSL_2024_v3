@@ -257,6 +257,8 @@ public class SwerveSubsystem extends SubsystemBase {
 	 *                         smoother controls.
 	 * @return Drive command.
 	 */
+
+	 //This is the command that actually drives the robot
 	public Command driveCommand(DoubleSupplier translationX, DoubleSupplier translationY,
 			DoubleSupplier angularRotationX) {
 		return run(() -> {
